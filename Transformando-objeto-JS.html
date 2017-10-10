@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Trasformando objeto JS</title>
+</head>
+<body>
+	
+	<h1>Transformando um objeto JavaScript em jQuery</h1>
+	
+	<p>Transformamos um objeto do Java Script envolvendo-o com $(). Exemplo usado é o this. $(this)</p>
+	
+	<p id="descricao">Clique Aqui</p>
+	
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		$("#descricao").click(function(){
+			
+			var texto = $(this).text();
+			alert(texto);
+		});
+	</script>
+</body>
+</html>
