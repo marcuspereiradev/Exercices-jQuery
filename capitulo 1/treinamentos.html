@@ -41,6 +41,18 @@
 		var texto = $("#treinamento").val();
 		$("<li>").text(texto).css({"color": "blue", "background-color": "lightgrey"}).appendTo("#lista");
 	});
+	
+	$.ajax({
+		url	: "http://mirrorfashion.caelum.com.br/treinamentos",
+		dataType: "jsonp",
+		success: function(retorno) {
+			
+			$.each(retorno.treinamentos, function(){
+				var treinamento = this;
+				$("<li>").css("color", "green").text(treinamento.nome).appendTo("#Lista");
+			});
+		}
+	});
 </script>
 </body>
 </html>
